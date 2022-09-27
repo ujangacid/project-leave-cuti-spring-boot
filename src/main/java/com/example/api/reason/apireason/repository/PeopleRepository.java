@@ -46,14 +46,14 @@ public class PeopleRepository {
         return jdbcTemplate.queryForObject(query.getPeopleByNip,map,new BeanPropertyRowMapper<>(People.class));
     }
 
-    public People update(People data) {
+    public People update(People data){
         MapSqlParameterSource map = new MapSqlParameterSource();
-        map.addValue("name",data.getName());
-        map.addValue("address",data.getAddress());
-        map.addValue("position",data.getPosition());
-        map.addValue("nip",data.getNip());
-        map.addValue("id",data.getId());
-        jdbcTemplate.update(query.updatePeople,map);
+        map.addValue("name", data.getName());
+        map.addValue("address", data.getAddress());
+        map.addValue("position", data.getPosition());
+        map.addValue("nip", data.getNip());
+        map.addValue("id", data.getId());
+        jdbcTemplate.update(query.updatePeople, map);
         return data;
     }
 

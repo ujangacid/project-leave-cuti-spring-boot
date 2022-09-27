@@ -4,14 +4,14 @@ import org.springframework.data.annotation.Id;
 
 public class Leave {
     @Id
-    // @GeneratedValue(strategy = GenerationType.IDENTITY)
+    // @GeneratedValue(strategy = GenerationType.IDENTITY);
     private int id;
     
     private String type;
     private String cuti;
     
     public Leave(int id,String type, String cuti){
-        this.id = id;
+        // this.id = id;
         this.type = type;
         this.cuti = cuti;
     }

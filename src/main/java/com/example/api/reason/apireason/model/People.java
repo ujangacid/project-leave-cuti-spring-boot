@@ -16,7 +16,7 @@ public class People {
     private String nip;
 
     public People(int id,String name,String address,String position,String nip) {
-        this.id = id;
+        // this.id = id;
         this.name = name;
         this.address = address;
         this.position = position;

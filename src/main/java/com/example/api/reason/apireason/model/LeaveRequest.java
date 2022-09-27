@@ -24,8 +24,10 @@ public class LeaveRequest {
     private Leave leave;
 
     public LeaveRequest(int id,int people_id,People people,int leave_id, Leave leave, Date start_date, Date end_date,String reason){
-        this.id = id;
+        // this.id = id;
+        this.people_id = people_id;
         this.people = people;
+        this.leave_id = leave_id;
         this.leave = leave;
         this.start_date = start_date;
         this.end_date = end_date;
