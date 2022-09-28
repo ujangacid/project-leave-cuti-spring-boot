@@ -6,8 +6,6 @@ import org.springframework.data.annotation.Id;
 
 public class People {
 
-    @Id
-    // @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
     private String name;
@@ -15,7 +13,7 @@ public class People {
     private String position;
     private String nip;
 
-    public People(int id,String name,String address,String position,String nip) {
+    public People(String name,String address,String position,String nip) {
         // this.id = id;
         this.name = name;
         this.address = address;
@@ -25,6 +23,8 @@ public class People {
 
     public People(){}
 
+    @Id
+    // @GeneratedValue(strategy = GenerationType.IDENTITY)
     public int getId(){
         return id;
     }

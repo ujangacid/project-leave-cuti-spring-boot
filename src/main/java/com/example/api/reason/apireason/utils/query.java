@@ -19,7 +19,7 @@ public interface query {
     String deleteLeave = "delete from leave where id = :id";
 
     //leave request
-    String createLeaveRequest = "insert into leave_request (people_id,leave_id,start_date,end_date,reason) values :people_id,:leave_id,:start_date,:end_date,:reason)";
+    String createLeaveRequest = "insert into leave_request (people_id,leave_id,start_date,end_date,reason) values (:people_id,:leave_id,:start_date,:end_date,:reason)";
     String listLeaveRequest = "select lr.id,lr.people_id,lr.leave_id,lr.start_date,lr.end_date,lr.reason,p.id,p.name,p.address,p.position,p.nip,l.id,l.type,l.cuti from leave_request lr join people p on lr.people_id = p.id join leave l on lr.leave_id = l.id order by lr.id asc";
     String getLeaveRequestById = "select lr.id,lr.people_id,lr.leave_id,lr.start_date,lr.end_date,lr.reason,p.id,p.name,p.address,p.position,p.nip,l.id,l.type,l.cuti from leave_request lr join people p on lr.people_id = p.id join leave l on lr.leave_id = l.id where lr.id = :id order by lr.id asc";
     String deleteLeaveRequest = "delete from leave_request where id = :id";

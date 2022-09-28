@@ -7,8 +7,7 @@ import org.springframework.data.annotation.Id;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 public class LeaveRequest {
-    @Id
-    // @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     private int id;
     
     private int people_id;
@@ -23,12 +22,12 @@ public class LeaveRequest {
     private People people;
     private Leave leave;
 
-    public LeaveRequest(int id,int people_id,People people,int leave_id, Leave leave, Date start_date, Date end_date,String reason){
+    public LeaveRequest(int people_id,int leave_id, Date start_date, Date end_date,String reason){
         // this.id = id;
         this.people_id = people_id;
-        this.people = people;
+        // this.people = people;
         this.leave_id = leave_id;
-        this.leave = leave;
+        // this.leave = leave;
         this.start_date = start_date;
         this.end_date = end_date;
         this.reason = reason;
@@ -53,6 +52,8 @@ public class LeaveRequest {
         this.leave = leave;
     }
 
+    @Id
+    // @GeneratedValue(strategy = GenerationType.IDENTITY);
     public int getId(){
         return id;
     }

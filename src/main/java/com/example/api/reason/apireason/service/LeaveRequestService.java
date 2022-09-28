@@ -16,6 +16,8 @@ public class LeaveRequestService {
 
     public LeaveRequest create(LeaveRequest data){
         return leaveRequestRepository.create(data);
+        // LeaveRequest leaveRequest = leaveRequestRepository.create(data);
+        // return getById(data.getId());
     }
 
     public List<LeaveRequest> list(){
